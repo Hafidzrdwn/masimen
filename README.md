@@ -7,9 +7,9 @@
 
 ## Technologies
 
-- PHP Native
-- MySQL
-- Bootstrap
+- PHP 8.2.12
+- MySQL 8.0.37
+- Bootstrap 5
 - AlpineJS
 
 ## Features
