@@ -4,7 +4,6 @@ require_once __DIR__ . '/../app/config/index.php';
 require_once __DIR__ . '/../app/database.php';
 require_once __DIR__ . '/../app/session.php';
 require_once __DIR__ . '/../app/functions.php';
-require_once __DIR__ . '/../app/security/sanitize.php';
 require_once __DIR__ . '/../app/query_builder.php';
 require_once __DIR__ . '/../app/view.php';
 
