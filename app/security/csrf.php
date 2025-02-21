@@ -8,7 +8,7 @@ function csrfField()
 
 function checkCsrf()
 {
-  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'PUT' || $_SERVER['REQUEST_METHOD'] === 'DELETE') {
     if (!isset($_POST['csrf_token']) || !verifyToken($_POST['csrf_token'])) {
       die('Invalid CSRF Token!');
     }

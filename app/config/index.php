@@ -1,24 +1,17 @@
 <?php
-// Load environment variables
-require_once __DIR__ . '/../app/env.php';
+require_once __DIR__ . '/../env.php';
 
 // Define application settings
-define('APP_NAME', 'My PHP Native App');
-define('APP_URL', 'http://localhost/myapp');
+define('APP_NAME', 'MASIMEN');
+define('APP_URL', 'http://localhost:8080/masimen/public');
 define('APP_ENV', getenv('APP_ENV') ?: 'development');
 define('APP_DEBUG', APP_ENV === 'development'); // Set to false in production
 
 // Database configuration
 define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
-define('DB_NAME', getenv('DB_NAME') ?: 'my_database');
+define('DB_NAME', getenv('DB_NAME') ?: 'db_name');
 define('DB_USER', getenv('DB_USER') ?: 'root');
 define('DB_PASS', getenv('DB_PASS') ?: '');
-
-// Security settings
-define('SESSION_LIFETIME', 3600);
-define('HASH_ALGO', 'sha256');
-define('CSRF_TOKEN_SECRET', getenv('CSRF_SECRET') ?: 'my_random_secret');
-
 
 // Set timezone
 date_default_timezone_set('Asia/Jakarta');

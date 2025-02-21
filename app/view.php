@@ -4,31 +4,34 @@ class View
 {
   protected static array $sections = [];
   protected static string $layout;
+  protected static array $globals = []; // Global variables
 
-  // Start capturing a section
+  public static function setGlobal(string $key, mixed $value)
+  {
+    self::$globals[$key] = $value;
+  }
+
   public static function startSection(string $name)
   {
     self::$sections[$name] = '';
     ob_start();
   }
 
-  // Stop capturing and save the section
   public static function endSection()
   {
     $lastKey = array_key_last(self::$sections);
     self::$sections[$lastKey] = ob_get_clean();
   }
 
-  // Set the layout
   public static function extend(string $layout)
   {
     self::$layout = $layout;
   }
 
   // Render the final view with layout
-  public static function render(string $view, array $data = [])
+  public static function render(string $view)
   {
-    extract($data);
+    extract(self::$globals);
     ob_start();
 
     include __DIR__ . "/../views/$view.php";
