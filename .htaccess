@@ -1,10 +1,6 @@
-# Blokir akses ke .env
-
 <FilesMatch "^\.env">
 Require all denied
 </FilesMatch>
 
-# Blokir akses langsung ke folder tertentu
-
 RewriteEngine On
-RewriteRule ^(app|security|config|modules) - [F,L]
+RewriteRule ^(app) - [F,L]
