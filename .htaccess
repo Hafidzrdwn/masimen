@@ -1,6 +1,10 @@
+RewriteEngine On
+
 <FilesMatch "^\.env">
-Require all denied
+    Require all denied
 </FilesMatch>
 
-RewriteEngine On
-RewriteRule ^(app) - [F,L]
+RewriteRule ^app/ - [F,L]
+RewriteRule ^$ public/ [L]
+RewriteCond %{REQUEST_URI} !^/masimen/public/
+RewriteRule ^(.*)$ public/$1 [L]

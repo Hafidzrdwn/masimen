@@ -1,0 +1,12 @@
+{
+  "name": "hafidzrdwn/masimen-web-app",
+  "description": "MASIMEN (Manajemen Sistem Informasi Klasemen) adalah aplikasi web yang dirancang untuk mempermudah pengelolaan peringkat klasemen, khususnya dalam perankingan tim atau klub olahraga sepak bola.",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    },
+    "files": [
+      "app/helpers.php"
+    ]
+  }
+}

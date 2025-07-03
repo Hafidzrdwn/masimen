@@ -1,28 +1,30 @@
 <?php
-// Load configuration and dependencies
-require_once __DIR__ . '/../app/config/index.php';
-require_once __DIR__ . '/../app/database.php';
-require_once __DIR__ . '/../app/session.php';
-require_once __DIR__ . '/../app/functions.php';
-require_once __DIR__ . '/../app/query_builder.php';
-require_once __DIR__ . '/../app/view.php';
+require_once __DIR__ . '/../app/bootstrap.php';
 
-$query = new QueryBuilder($pdo);
+use App\Core\Router;
+use App\Core\Csrf;
+use App\Core\ModelNotFoundException;
+// use App\Core\View;
 
-$request_string = explode('/', substr($_SERVER['REQUEST_URI'], 1))[2];
-$request_page = sanitizeInput($request_string) ?: 'home';
-
-// Verify if the file exists before including it
-$page_file = __DIR__ . "/../views/{$request_page}.php";
-
-if (!file_exists($page_file)) {
-  http_response_code(404);
-  View::render('404');
-  exit;
+try {
+  Csrf::check();
+} catch (\Exception $e) {
+  http_response_code(403);
+  die($e->getMessage());
 }
 
-// load globals variables
-View::setGlobal('query', $query);
+$router = new Router();
+require_once __DIR__ . '/../app/routes.php';
 
-// Load the requested page
-View::render($request_page);
+try {
+  $router->dispatch();
+} catch (ModelNotFoundException $e) {
+  http_response_code(404);
+  die($e->getMessage());
+  // View::render('errors.404', ['message' => $e->getMessage()]); // Gunakan getMessage() bawaan
+
+} catch (\Exception $e) {
+  http_response_code(500);
+  die($e->getMessage());
+  // View::render('errors.500', ['message' => $e->getMessage()]);
+}
