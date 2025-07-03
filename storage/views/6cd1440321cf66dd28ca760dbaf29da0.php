@@ -12,14 +12,12 @@
         </p>
         <div class="hero-buttons">
           <a href="#" class="btn-primary-custom">
-            <i class="bi bi-box-arrow-in-right me-2"></i>Gas Coba Sekarang
+            <i class="fa-solid fa-right-to-bracket me-2"></i>Gas Coba Sekarang
           </a>
         </div>
       </div>
       <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-        <div class="text-center">
-          <i class="bi bi-trophy" style="font-size: 15rem; opacity: 0.1;"></i>
-        </div>
+        <img src="<?php echo htmlspecialchars(asset('img/illustrations/hero-image.png'), ENT_QUOTES, 'UTF-8'); ?>" alt="Hero Illustration" class="img-fluid hero-image">
       </div>
     </div>
   </div>
@@ -33,7 +31,7 @@
       <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
         <div class="feature-card">
           <div class="feature-icon">
-            <i class="bi bi-collection"></i>
+            <i class="fa-solid fa-folder-tree"></i>
           </div>
           <h3 class="feature-title">Multi-kompetisi</h3>
           <p class="feature-description">
@@ -44,7 +42,7 @@
       <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
         <div class="feature-card">
           <div class="feature-icon">
-            <i class="bi bi-people-fill"></i>
+            <i class="fa-solid fa-users"></i>
           </div>
           <h3 class="feature-title">Manajemen Tim & Pertandingan</h3>
           <p class="feature-description">
@@ -55,7 +53,7 @@
       <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
         <div class="feature-card">
           <div class="feature-icon">
-            <i class="bi bi-graph-up"></i>
+            <i class="fa-solid fa-ranking-star"></i>
           </div>
           <h3 class="feature-title">Klasemen Otomatis Real-time</h3>
           <p class="feature-description">
@@ -66,7 +64,7 @@
       <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
         <div class="feature-card">
           <div class="feature-icon">
-            <i class="bi bi-phone"></i>
+            <i class="fa-solid fa-mobile-screen"></i>
           </div>
           <h3 class="feature-title">Tampilan Responsif</h3>
           <p class="feature-description">
@@ -143,10 +141,10 @@
       </p>
       <div class="cta-buttons">
         <a href="#" class="btn-primary-custom me-3">
-          <i class="bi bi-rocket-takeoff me-2"></i>Coba Sekarang
+          <i class="fa-solid fa-rocket me-2"></i>Coba Sekarang
         </a>
         <a href="#" class="btn-outline-custom">
-          <i class="bi bi-chat-dots me-2"></i>Hubungi Kami
+          <i class="fa-solid fa-comments me-2"></i>Hubungi Kami
         </a>
       </div>
     </div>
