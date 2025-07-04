@@ -1,4 +1,4 @@
-# MASIMEN (Management Sistem Informasi Klasemen)
+# MASIMEN (Manajemen Sistem Informasi Klasemen)
 
 ## Introduction
 
