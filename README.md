@@ -7,13 +7,14 @@
 
 ## Technologies
 
-- PHP 8.2.12
+- PHP 8.2.12 (native)
 - MySQL 8.0.37
 - Bootstrap 5
-- AlpineJS
+- Jquery
 
 ## Features
 
 ## Resources
 
-- Materio - Free Bootstrap 5 HTML Admin Template [https://github.com/themeselection/materio-bootstrap-html-admin-template-free]
+- Fontawesome
+- Google Fonts
